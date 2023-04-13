@@ -1,0 +1,348 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	background: #f5f5f7;
+	color: #1d1d1f;
+}
+
+.wrapper {
+	margin: 2% 2%;
+	width: 85%;
+	height: 85vh;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+.title {
+	margin: 15%;
+}
+.title h1 {
+	font-size: 3rem;
+}
+
+.title p {
+	font-size: 1.1rem;
+}
+.menu {
+	margin-left: 15%;
+	margin-top: 40%;
+}
+
+.menu button {
+	text-decoration: none;
+	transition-duration: 0.3s;
+	font-size: 2rem;
+	border: none;
+	margin: 5% 0;
+	background: transparent;
+}
+
+#about-me {
+	display: inherit;
+}
+#about-me:hover {
+	transform: scale(1.2, 1.1) translate(20px);
+}
+#my-work {
+	display: inherit;
+}
+#my-work:hover {
+	transform: scale(1.2, 1.1) translate(20px);
+}
+#contact-me {
+	display: inherit;
+}
+#contact-me:hover {
+	transform: scale(1.2, 1.1) translate(20px);
+}
+
+#about {
+	padding: 0 0 10% 10%;
+	margin-top: 7%;
+	display: none; /* -----------div display------------ */
+	transition-duration: 0.3s;
+	opacity: 70%;
+}
+#about:hover {
+	opacity: 100%;
+}
+
+#about p {
+	margin: 15% 3%;
+}
+
+#work {
+	padding: 0 0 10% 10%;
+	margin-top: 7%;
+	display: none; /* -----------div display------------ */
+	transition-duration: 0.3s;
+	opacity: 70%;
+}
+#work:hover {
+	opacity: 100%;
+}
+
+h2 {
+	color: #2997ff;
+	text-align: center;
+	text-decoration: overline;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3%;
+	margin: 15% 3%;
+}
+.projects:hover {
+	opacity: 100%;
+}
+
+.project-one {
+	transition-duration: 0.3s;
+}
+.project-one:hover {
+	transform: translate(0px, -20px);
+	box-shadow: 0px 47px 16px -13px #000;
+}
+
+.project-one a img {
+	transition-duration: 0.3s;
+	border-radius: 10px 10px 0 0;
+}
+
+.project-one a {
+	text-decoration: none;
+}
+.project-one span {
+	font-size: 1rem;
+	text-align: start;
+	color: #000000;
+	padding: 2% 4%;
+}
+.projects-two {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	border-radius: 0 0 10px 10px;
+	background: #ffffff;
+	color: #000;
+	transition-duration: 0.3s;
+	padding-bottom: 10px;
+}
+.projects-two span:hover {
+	color: #000000;
+}
+
+#contact {
+	padding: 0 0 10% 10%;
+	margin-top: 7%;
+	text-align: center;
+	display: none; /* -----------div display------------ */
+	transition-duration: 0.3s;
+	opacity: 70%;
+}
+#contact:hover {
+	opacity: 100%;
+}
+
+.contact-title p {
+	color: #2997ff;
+}
+
+.form {
+	width: 80%;
+	margin: auto;
+}
+
+.name {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 18%;
+	margin-left: 15%;
+}
+.username {
+	text-align: start;
+}
+.username input {
+	background: transparent;
+	border: transparent;
+	font-size: 1.4rem;
+	width: 60%;
+	color: #999999;
+	transition-duration: 0.3s;
+}
+.username input:hover {
+	border-bottom: 1px solid #1d1d1f;
+	opacity: 70%;
+	color: #666666;
+}
+.username input:focus {
+	border: none;
+	box-shadow: 0 0 3px #ffffff;
+	outline-offset: 0px;
+	outline: none;
+	opacity: 100%;
+}
+.email {
+	text-align: start;
+}
+.email input {
+	background: transparent;
+	border: transparent;
+	font-size: 1.4rem;
+	width: 60%;
+	color: #999999;
+	transition-duration: 0.3s;
+}
+.email input:hover {
+	border-bottom: 1px solid #1d1d1f;
+	opacity: 70%;
+	color: #666666;
+}
+.email:focus {
+	border: none;
+	box-shadow: 0 0 3px #ffffff;
+	outline-offset: 0px;
+	outline: none;
+	opacity: 100%;
+}
+
+#bio {
+	margin-top: 3%;
+	background: transparent;
+	border: 1px solid #666666;
+}
+#bio:hover {
+	border: 1px solid #999999;
+	opacity: 70%;
+}
+#bio:focus {
+	outline-offset: 0px;
+	outline: none;
+	color: #999999;
+}
+
+#submit-button {
+	background: #1d1d1f;
+	padding: 0;
+	color: #f5f5f7;
+	border: 1px solid #000;
+	border-radius: 3px;
+	width: 15%;
+	margin-top: 5%;
+	letter-spacing: 2px;
+	transition-duration: 0.3s;
+}
+
+#submit-button:hover {
+	background: #9e9e9e;
+	color: #1d1d1f;
+	border: 1px solid #666666;
+}
+.footer {
+	position: fixed;
+	bottom: 1%;
+	background: transparent;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 70%;
+}
+.footer img {
+	width: 13%;
+	margin: 7%;
+	display: inline;
+	transition-duration: 0.5s;
+}
+.footer img:hover {
+	transform: rotate(360deg);
+}
+
+i {
+	font-size: 1.7rem;
+	cursor: pointer;
+	margin-top: 10%;
+	margin-left: 10%;
+	transform: translate(-50%, -50%);
+}
+#dark-mode-text {
+	font-size: 0.8rem;
+	margin-left: 10%;
+}
