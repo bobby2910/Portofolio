@@ -161,6 +161,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 3%;
+	row-gap: 15%;
 	margin: 15% 3%;
 }
 
